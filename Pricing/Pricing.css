@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+/* 
+    font-family: "Ubuntu Condensed", sans-serif;
+*/
+:root {
+    --black: #100C08;
+    --blue: #0070FF;
+    --gray: #91A3B0;
+    --white: #FFFFFF;
+    --white-2: #F9F9F9;
+}
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu Condensed", sans-serif;
+}
+body, html {
+    background-color: var(--white-2);
+    overflow-y: hidden; 
+    overflow-x: hidden
+}
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0vh 3vh 0vh 3vh ;
+    -webkit-animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+.menu ion-icon {
+    font-size: 64px;
+    cursor: pointer;
+}
+.menu a {
+    text-decoration: none;
+    color: var(--black);
+}
+#blue {
+    color: var(--blue);
+}
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.menu ul li {
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+.menu ul li:hover {
+    cursor: pointer;
+    color: var(--blue);
+} 
+.menu div {
+    display: flex;
+    gap: 20px;
+} 
+.menu div button {
+    padding: 1.5vh 3vh;
+    border-radius: 0.7rem;
+    border: none;
+    outline: none;
+}
+.menu div button:nth-child(1) {
+    border: 1px solid var(--blue);
+    background-color: var(--white);
+}
+.menu div button:nth-child(2) {
+    background-color: var(--blue);
+    color: red;
+}
+.menu div button:nth-child(1) a {
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 500;
+}
+.menu div button:nth-child(2) a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+}
+.menu div button {
+    transition: 0.3s ease-in-out;
+}
+.menu div button:hover {
+    cursor: pointer;
+    box-shadow: 0px 9px 30px 0px rgba(74,74,74,0.15);
+}
+.content {
+    text-align: center;
+    margin: 3vh 3vh 0vh 3vh;
+    -webkit-animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+.content h1 {
+    font-size: 34px;
+    margin-bottom: 2vh;
+}
+.content p {
+    font-size: 19px;
+    color: var(--gray);
+    font-style: italic;
+    margin-bottom: 3vh;
+}
+.content span {
+    color: var(--black);
+}
+.content img {
+    width: 32%;
+}
+@keyframes slide-in-blurred-top {
+    0% {
+        -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0vh 0vh 0vh 20vh;
+    -webkit-animation: slide-in-blurred-bottom 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-bottom 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+footer h1 {
+    font-size: 60px;
+    margin-bottom: 3vh;
+}
+footer button {
+    padding: 1.5vh ;
+    width: 60%;
+    border: none;
+    outline: none;
+    border-radius: 0.8rem;
+    background-color: var(--blue);
+    font-size: 20px;
+    color: var(--white);
+    transition: 0.3s;
+}
+footer button:hover {
+    cursor: pointer;
+    box-shadow: 0px 9px 30px 0px rgba(74,74,74,0.15);
+}
+footer img {
+    width: 30%;
+}
+@keyframes slide-in-blurred-bottom {
+    0% {
+        -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+        transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}

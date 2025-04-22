@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+/* 
+    font-family: "Ubuntu Condensed", sans-serif;
+*/
+:root {
+    --black: #100C08;
+    --blue: #0070FF;
+    --gray: #91A3B0;
+    --white: #FFFFFF;
+    --white-2: #F9F9F9;
+}
+/**************************************************/
+/**************************************************/
+/**************************************************/
+/**************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu Condensed", sans-serif;
+}
+body, html {
+    background-color: var(--white-2);
+    overflow-y: hidden; 
+    overflow-x: hidden
+}
+.menu {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0vh 3vh 0vh 3vh ;
+    -webkit-animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-top 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+.menu ion-icon {
+    font-size: 64px;
+    cursor: pointer;
+}
+.menu a {
+    text-decoration: none;
+    color: var(--black);
+}
+#blue {
+    color: var(--blue);
+}
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.menu ul li {
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+}
+.menu ul li:hover {
+    cursor: pointer;
+    color: var(--blue);
+} 
+.menu div {
+    display: flex;
+    gap: 20px;
+} 
+.menu div button {
+    padding: 1.5vh 3vh;
+    border-radius: 0.7rem;
+    border: none;
+    outline: none;
+}
+.menu div button:nth-child(1) {
+    border: 1px solid var(--blue);
+    background-color: var(--white);
+}
+.menu div button:nth-child(2) {
+    background-color: var(--blue);
+    color: red;
+}
+.menu div button:nth-child(1) a {
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 18px;
+    font-weight: 500;
+}
+.menu div button:nth-child(2) a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 500;
+}
+.menu div button {
+    transition: 0.3s ease-in-out;
+}
+.menu div button:hover {
+    cursor: pointer;
+    box-shadow: 0px 9px 30px 0px rgba(74,74,74,0.15);
+}
+@keyframes slide-in-blurred-top {
+    0% {
+        -webkit-transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 0%;
+        transform-origin: 50% 0%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.content {
+    margin: 3vh 3vh 0vh 3vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.col-1 {
+    -webkit-animation: slide-in-blurred-left 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-left 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+.col-1 h1 {
+    font-size: 26px;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+.col-1 h1 span {
+    font-weight: 700;
+    color: var(--black);
+    font-size: 48px;
+}
+.col-1 p {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+.col-1 div {
+    display: flex;
+    gap: 20px;
+} 
+.col-1 div button {
+    border-radius: 0.7rem;
+    border: none;
+    outline: none;
+}
+.col-1 div button:nth-child(1) {
+    border: 1px solid var(--blue);
+    padding: 1.5vh 10vh;
+    background-color: var(--white);
+}
+.col-1 div button:nth-child(2) {
+    background-color: var(--blue);
+    padding: 1.5vh 6.2vh;
+    color: red;
+}
+.col-1 div button:nth-child(1) a {
+    text-decoration: none;
+    color: var(--blue);
+    font-size: 19px;
+    font-weight: 500;
+}
+.col-1 div button:nth-child(2) a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 19px;
+    font-weight: 500;
+}
+.col-1 div button {
+    transition: 0.3s ease-in-out;
+}
+.col-1 div button:hover {
+    cursor: pointer;
+    box-shadow: 0px 9px 30px 0px rgba(74,74,74,0.15);
+}
+@keyframes slide-in-blurred-left {
+    0% {
+        -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+        -webkit-transform-origin: 100% 50%;
+        transform-origin: 100% 50%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+.col-2 {
+	-webkit-animation: slide-in-blurred-right 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	animation: slide-in-blurred-right 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+@keyframes slide-in-blurred-right {
+    0% {
+        -webkit-transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+        transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+        -webkit-transform-origin: 0% 50%;
+        transform-origin: 0% 50%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+        transform: translateX(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+footer {
+    margin: 5vh 3vh 0vh 3vh;
+}
+footer h1 {
+    -webkit-animation: slide-in-blurred-bottom 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-bottom 2s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    text-align: center;
+    font-size: 48px;
+}
+.cards {
+    margin-top: 3vh;
+    text-align: center;
+    display: grid;
+    grid-template: 1fr /3fr 3fr 3fr;
+}
+.cards div ion-icon {
+    font-size: 64px;
+    color: var(--blue);
+}
+.cards div h3 {
+    margin-top: 2vh;
+    font-size: 28px;
+    font-weight: 700;
+}
+.cards div p {
+    margin-top: 2vh;
+    font-size: 18px;
+}
+.cards div:nth-child(1) {
+    -webkit-animation: slide-in-blurred-bottom 2.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-bottom 2.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+.cards div:nth-child(2) {
+    -webkit-animation: slide-in-blurred-bottom 3.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-bottom 3.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+.cards div:nth-child(3) {
+    -webkit-animation: slide-in-blurred-bottom 4.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: slide-in-blurred-bottom 4.5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+@keyframes slide-in-blurred-bottom {
+    0% {
+        -webkit-transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+        transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        -webkit-filter: blur(40px);
+        filter: blur(40px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+        transform: translateY(0) scaleY(1) scaleX(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        -webkit-filter: blur(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
